@@ -5,6 +5,7 @@ This library is a react component to render a table using two arrays of objects.
 
 The table can be sorted, filtered (using a search input), paginated and the number of row can be change (all can be disable).
 
+[Documentation](https://arthurblanc.github.io/react-ab-data-table/)
 
 ## Installation
 Run the following command:
