@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Pagination</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Argent Bank - Documentation</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"></div><div class="category"><h2>Components</h2><h3>Components</h3><ul><li><a href="DataTable.html">DataTable</a></li><li><a href="Pagination.html">Pagination</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Components</p>
+                    <h1>Pagination</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            &ltPagination <i>totalCount</i> <i>pageSize</i> <i>siblingCount</i> <i>currentPage</i> <i>onPageChange</i> <i>DOTS</i> <i>DOTSClassName</i> <i>pageButtonClassName</i> <i>currentPageClassName</i> <i>previousButtonClassName</i> <i>nextButtonClassName</i> <i>disabledClassName</i> /&gt
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="Pagination">
+        <a class="href-link" href="#Pagination">#</a>
+        
+        <span class="code-name">
+            
+                &ltPagination <i>totalCount</i> <i>pageSize</i> <i>siblingCount</i> <i>currentPage</i> <i>onPageChange</i> <i>DOTS</i> <i>DOTSClassName</i> <i>pageButtonClassName</i> <i>currentPageClassName</i> <i>previousButtonClassName</i> <i>nextButtonClassName</i> <i>disabledClassName</i> /&gt
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>A pagination component that can be used to navigate through a list of items.</p>
+    </div>
+    
+
+
+
+
+
+
+
+    
+        <h5>PropTypes:</h5>
+        
+<div class="table-container">
+  <table class="params table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th class="last">Default</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>totalCount</code></td>
+            <td>
+              number
+            </td>
+            <td>Yes</td>
+            <td>The total number of items in the list</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>pageSize</code></td>
+            <td>
+              number
+            </td>
+            <td>Yes</td>
+            <td>The number of items to show per page</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>siblingCount</code></td>
+            <td>
+              number
+            </td>
+            <td>No</td>
+            <td>The number of pages to show before and after the current page</td>
+            <td>1</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>currentPage</code></td>
+            <td>
+              number
+            </td>
+            <td>Yes</td>
+            <td>The current page number</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>onPageChange</code></td>
+            <td>
+              func
+            </td>
+            <td>Yes</td>
+            <td>The function to call when a page is clicked</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>DOTS</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The string to show in the pagination component when there are more pages than can be shown</td>
+            <td>"..."</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>DOTSClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the pagination component when there are more pages than can be shown</td>
+            <td>"ellipsis"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>pageButtonClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the page buttons</td>
+            <td>"paginate-button"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>currentPageClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the current page button</td>
+            <td>"current-page"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>previousButtonClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the previous button</td>
+            <td>"paginate-button previous"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>nextButtonClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the next button</td>
+            <td>"paginate-button next"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>disabledClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name to add to the disabled buttons</td>
+            <td>"disabled"</td>
+          </tr>
+          
+    
+    </tbody>
+  </table>
+</div>
+    
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="Pagination_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="Pagination_index.jsx.html">Pagination/index.jsx</a>, <a href="Pagination_index.jsx.html#line13">line 13</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><ul>
+<li>The pagination component.</li>
+</ul></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">React.Component</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+        
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~onNext">
+        <a class="href-link" href="#~onNext">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                onNext<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Go to the next page.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="Pagination_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="Pagination_index.jsx.html">Pagination/index.jsx</a>, <a href="Pagination_index.jsx.html#line96">line 96</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~onPrevious">
+        <a class="href-link" href="#~onPrevious">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                onPrevious<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Go to the previous page.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="Pagination_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="Pagination_index.jsx.html">Pagination/index.jsx</a>, <a href="Pagination_index.jsx.html#line101">line 101</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~range">
+        <a class="href-link" href="#~range">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                range<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Function to generate a range of pages to display</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="Pagination_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="Pagination_index.jsx.html">Pagination/index.jsx</a>, <a href="Pagination_index.jsx.html#line32">line 32</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>An array of numbers.</p></div>
+    
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>

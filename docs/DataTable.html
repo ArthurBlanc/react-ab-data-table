@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> DataTable</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">Argent Bank - Documentation</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"></div><div class="category"><h2>Components</h2><h3>Components</h3><ul><li><a href="DataTable.html">DataTable</a></li><li><a href="Pagination.html">Pagination</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Components</p>
+                    <h1>DataTable</h1>
+                </header>
+                
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            &ltDataTable <i>data</i> <i>columns</i> <i>tableId</i> <i>sortId</i> <i>itemsPerPageOptions</i> <i>itemsPerPageSelectionEnabled</i> <i>searchEnabled</i> <i>sortSelectionEnabled</i> <i>tableInfoEnabled</i> <i>paginationEnabled</i> <i>dataTablesWrapperClassName</i> <i>dataTablesLengthClassName</i> <i>dataTablesLengthLabelClassName</i> <i>dataTablesLengthSelectClassName</i> <i>dataTablesLengthOptionClassName</i> <i>dataTablesSearchWrapperClassName</i> <i>dataTablesSearchLabelClassName</i> <i>dataTablesSearchInputClassName</i> <i>dataTablesInfoClassName</i> <i>dataTablesPaginateClassName</i> <i>dataTableClassName</i> <i>dataTableHeaderClassName</i> <i>dataTableHeaderTrClassName</i> <i>dataTableHeaderThClassName</i> <i>dataTableHeaderSortedClassName</i> <i>dataTableBodyClassName</i> <i>dataTableBodyTrClassName</i> <i>dataTableBodyTdClassName</i> <i>dataTableBodyTdSortedClassName</i> <i>dataTableBodyTdEmptyClassName</i> <i>dataTableBodyOddRowClassName</i> <i>dataTableBodyEvenRowClassName</i> /&gt
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+            <div class='vertical-section'>
+                <div class="members">
+                    <div class="member">
+                        <div class=name>
+                            <span class="tag">Constructor</span>
+                        </div>
+                        
+
+
+    
+    <h4 class="name" id="DataTable">
+        <a class="href-link" href="#DataTable">#</a>
+        
+        <span class="code-name">
+            
+                &ltDataTable <i>data</i> <i>columns</i> <i>tableId</i> <i>sortId</i> <i>itemsPerPageOptions</i> <i>itemsPerPageSelectionEnabled</i> <i>searchEnabled</i> <i>sortSelectionEnabled</i> <i>tableInfoEnabled</i> <i>paginationEnabled</i> <i>dataTablesWrapperClassName</i> <i>dataTablesLengthClassName</i> <i>dataTablesLengthLabelClassName</i> <i>dataTablesLengthSelectClassName</i> <i>dataTablesLengthOptionClassName</i> <i>dataTablesSearchWrapperClassName</i> <i>dataTablesSearchLabelClassName</i> <i>dataTablesSearchInputClassName</i> <i>dataTablesInfoClassName</i> <i>dataTablesPaginateClassName</i> <i>dataTableClassName</i> <i>dataTableHeaderClassName</i> <i>dataTableHeaderTrClassName</i> <i>dataTableHeaderThClassName</i> <i>dataTableHeaderSortedClassName</i> <i>dataTableBodyClassName</i> <i>dataTableBodyTrClassName</i> <i>dataTableBodyTdClassName</i> <i>dataTableBodyTdSortedClassName</i> <i>dataTableBodyTdEmptyClassName</i> <i>dataTableBodyOddRowClassName</i> <i>dataTableBodyEvenRowClassName</i> /&gt
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Takes in data, columns and returns a table that can be sorted (if the column is declared sortable),
+filtered (can be disable), and paginated (can be disable).
+data and columns must be arrays of object.</p>
+<p>data must be an array of objects, each object will be a row in the table, the keys in the objects must be the id of the column.
+[{ idOfColumnOne: &quot;dataOfColumnOne&quot;, idOfColumnTwo: &quot;dataOfColumnTwo&quot;, idOfColumnThree: &quot;dataOfColumnThree&quot;, ...},...]</p>
+<p>columns must be an array of objects with the following properties:
+[{ name: &quot;First Name&quot;, id: &quot;firstName&quot;, sortable: true, headColSpan: 2, bodyColSpan: 2 },...]
+name: the name of the column displayed in the table header.
+id: the id of the column
+sortable: boolean, if the column is sortable
+headColSpan: size of the column in the header
+bodyColSpan: size of the column in the body</p>
+    </div>
+    
+
+
+
+
+
+
+
+    
+        <h5>PropTypes:</h5>
+        
+<div class="table-container">
+  <table class="params table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Required</th>
+        <th>Description</th>
+        <th class="last">Default</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>data</code></td>
+            <td>
+              arrayOf
+            </td>
+            <td>Yes</td>
+            <td>The data to be displayed in the table</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>columns</code></td>
+            <td>
+              arrayOf
+            </td>
+            <td>Yes</td>
+            <td>The columns to be displayed in the table</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>tableId</code></td>
+            <td>
+              string
+            </td>
+            <td>Yes</td>
+            <td>The id of the table</td>
+            <td></td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>sortId</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The id of the column to be sorted</td>
+            <td>function()</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>itemsPerPageOptions</code></td>
+            <td>
+              array
+            </td>
+            <td>No</td>
+            <td>The options for the items per page dropdown</td>
+            <td>[10, 25, 50, 100]</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>itemsPerPageSelectionEnabled</code></td>
+            <td>
+              bool
+            </td>
+            <td>No</td>
+            <td>Whether the items per page dropdown should be enabled</td>
+            <td>true</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>searchEnabled</code></td>
+            <td>
+              bool
+            </td>
+            <td>No</td>
+            <td>Whether the search input should be enabled</td>
+            <td>true</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>sortSelectionEnabled</code></td>
+            <td>
+              bool
+            </td>
+            <td>No</td>
+            <td>Whether the sort dropdown should be enabled</td>
+            <td>true</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>tableInfoEnabled</code></td>
+            <td>
+              bool
+            </td>
+            <td>No</td>
+            <td>Whether the table info should be enabled</td>
+            <td>true</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>paginationEnabled</code></td>
+            <td>
+              bool
+            </td>
+            <td>No</td>
+            <td>Whether the pagination should be enabled</td>
+            <td>true</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesWrapperClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the wrapper div</td>
+            <td>"data-tables-wrapper"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesLengthClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the length div</td>
+            <td>"data-tables-length"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesLengthLabelClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the length label</td>
+            <td>"data-tables-length-label"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesLengthSelectClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the length select</td>
+            <td>"data-tables-length-select"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesLengthOptionClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the length options</td>
+            <td>"data-tables-length-option"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesSearchWrapperClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the search wrapper div</td>
+            <td>"data-tables-search-wrapper"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesSearchLabelClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the search label</td>
+            <td>"form-label"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesSearchInputClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the search input</td>
+            <td>"form-input"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesInfoClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the info div</td>
+            <td>"data-tables-info"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTablesPaginateClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the paginate div</td>
+            <td>"data-tables-paginate"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table</td>
+            <td>"data-table"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableHeaderClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table header</td>
+            <td>"data-table-header"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableHeaderTrClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table header tr</td>
+            <td>"data-table-header-tr"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableHeaderThClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table header th</td>
+            <td>"data-table-header-th"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableHeaderSortedClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table header th sorted</td>
+            <td>"sorting"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body</td>
+            <td>"data-table-body"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyTrClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body tr</td>
+            <td>"data-table-body-tr"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyTdClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body td</td>
+            <td>"data-table-body-td"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyTdSortedClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body td sorted</td>
+            <td>"sorting_1"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyTdEmptyClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body td empty</td>
+            <td>"data-tables-empty"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyOddRowClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body tr odd</td>
+            <td>"odd"</td>
+          </tr>
+          
+    
+          <tr class="deep-level-0">
+            <td class="name"><code>dataTableBodyEvenRowClassName</code></td>
+            <td>
+              string
+            </td>
+            <td>No</td>
+            <td>The class name of the table body tr even</td>
+            <td>"even"</td>
+          </tr>
+          
+    
+    </tbody>
+  </table>
+</div>
+    
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="DataTable_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="DataTable_index.jsx.html">DataTable/index.jsx</a>, <a href="DataTable_index.jsx.html#line32">line 32</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><ul>
+<li>The table component.</li>
+</ul></div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<code class="param-type">React.Component</code>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        
+    
+    </div>
+    
+        
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <div class='vertical-section'>
+            <h1>Methods</h1>
+            <div class="members">
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~handleChangeItemsPerPage">
+        <a class="href-link" href="#~handleChangeItemsPerPage">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                handleChangeItemsPerPage<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Sets the items per page to the value of the event target and sets the current page to 1.</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="DataTable_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="DataTable_index.jsx.html">DataTable/index.jsx</a>, <a href="DataTable_index.jsx.html#line197">line 197</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~handleSearch">
+        <a class="href-link" href="#~handleSearch">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                handleSearch<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>Takes the search input and filters the data based on the search input</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="DataTable_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="DataTable_index.jsx.html">DataTable/index.jsx</a>, <a href="DataTable_index.jsx.html#line159">line 159</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~handleSortChange">
+        <a class="href-link" href="#~handleSortChange">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                handleSortChange<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>If the column is the same as the current sort column, then toggle the sort order.
+Otherwise, set the sort order to ascending</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="DataTable_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="DataTable_index.jsx.html">DataTable/index.jsx</a>, <a href="DataTable_index.jsx.html#line181">line 181</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="~sortData">
+        <a class="href-link" href="#~sortData">#</a>
+        
+            
+                <span class='tag'>inner</span>
+            
+        
+        <span class="code-name">
+            
+                sortData<span class="signature">()</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        <p>It sorts the data by date if the value is a valid date, otherwise it sorts the data by string</p>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="DataTable_index.jsx.html" class="button">View Source</a>
+            <span>
+                <a href="DataTable_index.jsx.html">DataTable/index.jsx</a>, <a href="DataTable_index.jsx.html#line71">line 71</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'><p>the sorted data.</p></div>
+    
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+</div>
+            
+            </div>
+        </div>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>
